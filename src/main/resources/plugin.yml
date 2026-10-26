@@ -1,0 +1,17 @@
+name: CheatLabel
+version: '${project.version}'
+main: hu.cheatlabel.CheatLabel
+api-version: '1.21'
+description: Kiirja a nametag fole, hogy a jatekos milyen cheat clientet hasznal (csak operatoroknak).
+commands:
+  cheatlabel:
+    description: CheatLabel kezelese
+    usage: /cheatlabel <list|check|reload>
+    permission: cheatlabel.see
+permissions:
+  cheatlabel.see:
+    description: Latja a cheat client feliratokat es ertesiteseket
+    default: op
+  cheatlabel.admin:
+    description: Ujratoltheti a plugint
+    default: op

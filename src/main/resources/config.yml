@@ -1,0 +1,48 @@
+# CheatLabel beallitasok
+# A feliratot es az ertesiteseket csak a cheatlabel.see jogosultsaggal rendelkezok latjak (alapbol op).
+
+label:
+  # Mennyivel legyen a nametag fole emelve (blokkban). Ha takarja a nevet vagy tul magasan van, ezt allitsd.
+  y-offset: 0.6
+  scale: 1.0
+  see-through: false
+  background: true
+  # MiniMessage formatum, a <client> a client neve
+  format: "<red><bold><client>"
+
+alerts:
+  chat: true
+  console: true
+  # <player> es <client> hasznalhato
+  format: "<dark_red>[CheatLabel] <red><player> <gray>cheat clientet hasznal: <yellow><client>"
+
+detection:
+  # Milyen gyakran ellenorizze a jatekosokat (tick, 20 = 1 mp)
+  interval-ticks: 20
+  # Hany ellenorzes utan adja fel egy jatekosnal, ha nem talalt semmit (60 * 1 mp = 1 perc)
+  max-attempts: 60
+
+# Felismeresi szabalyok. A brand (client brand) es a regisztralt plugin csatornak nevei kozott keres,
+# kis-nagybetu nelkul, "tartalmazza" alapon. Ha egy client mas neven jelentkezik, ird be ide.
+# A /cheatlabel check <jatekos> megmutatja egy jatekos brandjet es csatornait.
+clients:
+  krypton:
+    display: "Krypton Client"
+    brand: ["krypton"]
+    channels: ["krypton"]
+  gooba:
+    display: "Gooba Client"
+    brand: ["gooba"]
+    channels: ["gooba"]
+  meteor:
+    display: "Meteor Client"
+    brand: ["meteor"]
+    channels: ["meteor-client", "meteor_client"]
+  anubis:
+    display: "Anubis Client"
+    brand: ["anubis"]
+    channels: ["anubis"]
+  vape:
+    display: "Vape Client"
+    brand: ["vape"]
+    channels: ["vape"]
